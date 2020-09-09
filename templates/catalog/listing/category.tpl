@@ -30,7 +30,7 @@
   {* <img src="{$category.image.large.url}" alt="{$category.image.legend}"> *}
  </div> 
   <div class="category-description__wrapper">
-      <h1>{$category.name}</h1>
+      <h1 class="category--title">{$category.name}</h1>
       <div id="category-description">{$category.description nofilter}</div>
   </div>
   
