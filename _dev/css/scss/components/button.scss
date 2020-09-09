@@ -1,0 +1,76 @@
+@import "../base/variables.scss";
+button,
+.btn {
+  border: 1px solid $black;
+  border-radius: 4px;
+  background: $black;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: $white;
+  // font-weight: 700;
+  transition: 0.3s all ease;
+  // -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+  //   0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+  //   0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  &:hover {
+    background: $comp-clr;
+    border: 1px solid $comp-clr;
+    color: $main-clr;
+  }
+
+  &.btn-unstyle {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    &:hover {
+      background: transparentr;
+      border: none;
+      color: $main-clr;
+    }
+  }
+
+  &.no-box-shadow {
+    box-shadow: none;
+  }
+}
+
+//add to cart
+.product-add-to-cart {
+  .input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "minus input plus";
+  }
+  input#quantity_wanted {
+    grid-area: input;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .input-group.bootstrap-touchspin {
+    box-shadow: none;
+  }
+
+  button.btn-touchspin {
+    height: 100%;
+    color: $black;
+
+    &.bootstrap-touchspin-up {
+      grid-area: plus;
+    }
+
+    &:first-of-type {
+      border-radius: 0 4px 4px 0;
+    }
+
+    &:last-child {
+      border-radius: 4px 0 0 4px;
+    }
+
+    i.material-icons {
+      display: none;
+    }
+  }
+}
